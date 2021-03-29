@@ -25,7 +25,7 @@ public class AppTest
     }
 
     @Test
-    public void addStudentWithValidGroup(){
+    public void tc_1_addStudentWithValidGroup(){
         // given
         Validator<Student> studentValidator = new StudentValidator();
         StudentRepository studentRepository = new StudentRepository(studentValidator);
