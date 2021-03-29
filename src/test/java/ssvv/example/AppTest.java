@@ -32,7 +32,7 @@ public class AppTest
         // when
         Student s = studentRepository.save(new Student("17", "cristi", 600));
         // then
-        assertNotNull(s);
+        assertNull(s);
         studentRepository.delete("77");
     }
     @Test
