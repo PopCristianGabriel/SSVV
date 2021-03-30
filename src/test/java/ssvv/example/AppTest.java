@@ -44,7 +44,7 @@ public class AppTest {
 
     @Test
     public void addStudentWithInvalidGroup() {
-        Student s = studentRepository.save(new Student("17", "cristi", -1));
+        Student s = studentRepository.save(new Student("17", "cristi", 938));
         assertNull(s);
     }
 
@@ -69,6 +69,24 @@ public class AppTest {
     @Test
     public void addStudentInvalidId(){
         Student s = studentRepository.save(new Student("", "dawd", 600));
+        assertNull(s);
+    }
+
+    @Test
+    public void addStudentWithInvalidGroup2() {
+        Student s = studentRepository.save(new Student("17", "cristi", 110));
+        assertNull(s);
+    }
+
+    @Test
+    public void addStudentWithInvalidGroup3(){
+        Student s = studentRepository.save(new Student("17","cristi",1000));
+        assertNull(s);
+    }
+
+    @Test
+    public void addStudentWithInvalidGroup4(){
+        Student s = studentRepository.save(new Student("17","cristi",17));
         assertNull(s);
     }
 
