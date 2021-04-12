@@ -107,6 +107,48 @@ public class AppTest {
         assertNull(t);
     }
 
+    @Test
+    public void addAssigmnetIdNull(){
+        Tema t = temaRepository.save(new Tema(null,"descriere",8,7));
+        assertNull(t);
+    }
+
+    @Test
+    public void addAssignmentDescriptionNull(){
+        Tema t = temaRepository.save(new Tema("1",null,8,7));
+        assertNull(t);
+    }
+
+    @Test
+    public void addAssignmentDescriptionEmpty(){
+        Tema t = temaRepository.save(new Tema("1","",8,7));
+        assertNull(t);
+    }
+
+    @Test
+    public void addAssignmentDeadlineNegative(){
+        Tema t = temaRepository.save(new Tema("1","descriere",-1,7));
+        assertNull(t);
+    }
+
+    @Test
+    public void addAssignemntDeadlineTooBig(){
+        Tema t = temaRepository.save(new Tema("1","descriere",20,7));
+        assertNull(t);
+    }
+
+    @Test
+    public void addAssignmentDeadlineBeforeStartLine(){
+        Tema t = temaRepository.save(new Tema("1","descriere",7,8));
+        assertNull(t);
+    }
+
+    @Test
+    public void addAssigmnetStartLineNegative(){
+        Tema t = temaRepository.save(new Tema("1","descriere",7,-1));
+        assertNull(t);
+    }
+
 
 
 
