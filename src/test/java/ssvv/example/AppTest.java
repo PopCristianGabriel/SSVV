@@ -148,8 +148,4 @@ public class AppTest {
         Tema t = temaRepository.save(new Tema("1","descriere",7,-1));
         assertNull(t);
     }
-
-
-
-
 }
