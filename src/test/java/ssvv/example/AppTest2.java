@@ -37,12 +37,10 @@ public class AppTest2 {
         Student s = studentRepository.save(new Student("17", "dawd", 600));
         assertNull(s);
     }
-    @Test
     public void addAssignmentValid(){
         Tema t = temaRepository.save(new Tema("1","descriere",8,7));
         assertNull(t);
     }
-    @Test
     public void addGradeValid(){
         Nota n = notaRepository.save(new Nota(new Pair("1","1"),5,5,"feedback"));
         assertNull(n);
@@ -52,7 +50,5 @@ public class AppTest2 {
     public void bingBang(){
         this.addAssignmentValid();
         this.addGradeValid();
-        this.addStudentValidName();
-        assertTrue(true);
     }
 }
