@@ -53,5 +53,6 @@ public class AppTest2 {
         this.addAssignmentValid();
         this.addGradeValid();
         this.addStudentValidName();
+        assertTrue(true);
     }
 }
