@@ -55,4 +55,24 @@ public class AppTest2 {
         this.addStudentValidName();
         assertTrue(true);
     }
+
+    @Test
+    public void ingerationAddAssignment(){
+        Student s = studentRepository.save(new Student("17", "dawd", 600));
+        assertNull(s);
+        Tema t = temaRepository.save(new Tema("1","descriere",8,7));
+        assertNull(t);
+    }
+
+    @Test
+    public void integrationAddGrade(){
+        Student s = studentRepository.save(new Student("1", "dawd", 600));
+        assertNull(s);
+        Tema t = temaRepository.save(new Tema("1","descriere",8,7));
+        assertNull(t);
+        Nota n = notaRepository.save(new Nota(new Pair("1","11"),5,7,"feedback"));
+        assertNull(n);
+    }
+
+
 }
